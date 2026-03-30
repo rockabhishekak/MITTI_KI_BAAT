@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -28,4 +33,111 @@
     padding: 8px 16px;
     border-radius: 5px;
     border: none;
+    /* transform: */
+}
+
+
+
+
+.hero {
+    height: 80vh;
+    background: url('/images/hero_background.jpg') no-repeat center/cover;
+    display: flex;
+    align-items: center;
+    padding: 60px;
+    color: white;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.hero p {
+    margin: 20px 0;
+}
+
+.primary {
+    background: #1b5e20;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+}
+
+.secondary {
+    background: rgba(255,255,255,0.2);
+    color: white;
+    padding: 12px 20px;
+    margin-left: 10px;
+}
+
+.overview {
+    padding: 60px;
+    background: #f0fdf1;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+}
+
+.steps {
+    text-align: center;
+    padding: 80px 20px;
+    background: #eaf7eb;
+}
+
+.steps h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    margin-bottom: 50px;
+    color: gray;
+}
+
+.step-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+/* Line */
+.step-container::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background: #ccc;
+}
+
+.step {
+    width: 250px;
+}
+
+.circle {
+    width: 60px;
+    height: 60px;
+    background: #1b5e20;
+    color: white;
+    border-radius: 30%;
+    line-height: 60px;
+    margin: auto;
+    font-weight: bold;
 }
