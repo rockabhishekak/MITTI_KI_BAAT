@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -35,6 +37,7 @@
     border-radius: 5px;
     border: none;
     /* transform: */
+
 }
 
 
@@ -92,7 +95,31 @@
     padding: 30px;
     background: white;
     border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
 }
+
+.badge{
+    font-size: 24px;
+    color: #1b5e20;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* add hover effect */
+.badge:hover{
+    transform: translateY(-8px);
+    color: #388e3c;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+}
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
 
 .card:first-child {
     grid-row: 1 / span 2;
@@ -198,31 +225,19 @@
     top: 30px;
     left: 155px;
     right: 155px;
-    /* i want to stop this line after the last circle, what i can do ? ans:-   */
-
     height: 2px;
     background: #ccc;
     z-index: 0;
 }
 
-/* Line */
-
-/* .step-container::before {
-    content: "";
-    position: absolute;
-    top: 30px;
-    left: 270px;
-    
-    width: 80%;
-    height: 2px;
-    background: #ccc;
-}  */
 
 .step {
     width: 250px;
     position: relative;
     z-index: 1;
 }
+
+
 
 .circle {
     width: 60px;
@@ -235,4 +250,12 @@
     font-weight: bold;
     position: relative;
     z-index: 2;
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.circle:hover{
+    border-radius: 50px;
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
