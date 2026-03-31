@@ -1,8 +1,9 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -70,7 +71,7 @@
 }
 
 .secondary {
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
     color: white;
     padding: 12px 20px;
     margin-left: 10px;
@@ -83,7 +84,7 @@
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1.2fr 1fr 1fr;
     gap: 20px;
 }
 
@@ -91,6 +92,76 @@
     padding: 30px;
     background: white;
     border-radius: 10px;
+}
+
+.card:first-child {
+    grid-row: 1 / span 2;
+}
+
+.project-overview {
+    background: #f0fdf1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-overview h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #1b5e20;
+}
+
+.project-overview p {
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #e8f5e9;
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-top: auto;
+}
+
+.badge span {
+    font-size: 24px;
+}
+
+.badge p {
+    margin: 0;
+    font-size: 13px;
+}
+
+.badge strong {
+    color: #1b5e20;
+}
+
+.card:not(:first-child) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card:not(:first-child) h4 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.card:not(:first-child) h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #1b5e20;
+}
+
+.card:not(:first-child) p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
 }
 
 .steps {
@@ -111,24 +182,46 @@
 
 .step-container {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 70px;
     position: relative;
+    width: fit-content;
+    margin: 0 auto;
 }
 
-/* Line */
-.step-container::before {
+/* I want this line convert into arrow in between the circles  */
+
+.step-container::after {
     content: "";
     position: absolute;
     top: 30px;
-    left: 10%;
+    left: 155px;
+    right: 155px;
+    /* i want to stop this line after the last circle, what i can do ? ans:-   */
+
+    height: 2px;
+    background: #ccc;
+    z-index: 0;
+}
+
+/* Line */
+
+/* .step-container::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 270px;
+    
     width: 80%;
     height: 2px;
     background: #ccc;
-}
+}  */
 
 .step {
     width: 250px;
+    position: relative;
+    z-index: 1;
 }
 
 .circle {
@@ -136,8 +229,10 @@
     height: 60px;
     background: #1b5e20;
     color: white;
-    border-radius: 30%;
+    border-radius: 50%;
     line-height: 60px;
     margin: auto;
     font-weight: bold;
+    position: relative;
+    z-index: 2;
 }
