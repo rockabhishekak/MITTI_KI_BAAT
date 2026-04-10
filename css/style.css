@@ -18,6 +18,15 @@
     height: 100px;
 }
 
+.logo img:hover {
+    transform: scale(1.5) translateY(4px);
+    transition: transform 0.5s ease;
+}
+
+.logo img {
+    transition: transform 0.5s ease;
+}
+
 .nav-links {
     display: flex;
     list-style: none;
@@ -28,6 +37,7 @@
     text-decoration: none;
     color: #333;
     font-weight: bold;
+    font-size: larger;
 }
 
 .btn {
@@ -46,10 +56,14 @@
 .hero {
     height: 80vh;
     background: url('/images/hero_background.jpg') no-repeat center/cover;
+    opacity: 1;
+    background-color: #e6f2e8;
     display: flex;
     align-items: center;
     padding: 60px;
     color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
 }
 
 .hero-content {
@@ -99,7 +113,7 @@
 
 }
 
-.badge{
+.badge {
     font-size: 24px;
     color: #1b5e20;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -107,12 +121,14 @@
 
 
 /* add hover effect */
-.badge:hover{
+
+.badge:hover {
     transform: translateY(-8px);
     color: #388e3c;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 
 }
+
 .card:hover {
     transform: translateY(-8px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -250,12 +266,62 @@
     font-weight: bold;
     position: relative;
     z-index: 2;
-    
+
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.circle:hover{
+.circle:hover {
     border-radius: 50px;
     transform: translateY(-10px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.tools {
+    padding: 80px 40px;
+    background: #f0fdf1;
+}
+
+.tools h2 {
+    font-size: 30px;
+}
+
+.tool-sub {
+    margin-bottom: 40px;
+    color: gray;
+}
+
+.tool-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.tool-card {
+    padding: 30px;
+    background: #e6f2e8;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/* Hover effect 🔥 */
+.tool-card:hover {
+    transform: translateY(-10px);
+    background: #1b5e20;
+    color: white;
+}
+
+/* Active card */
+/* .tool-card.active {
+    background: #1b5e20;
+    color: white;
+} */
+
+@media (max-width: 768px) {
+    .tool-container {
+        grid-template-columns: 1fr;
+    }
+}
+.tool-card {
+    transition: all 0.3s ease;
 }
