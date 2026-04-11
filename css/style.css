@@ -1247,3 +1247,241 @@
         align-items: flex-start;
     }
 }
+
+.contact-page {
+    background: #eaf4ea;
+    padding: 34px 14px 58px;
+    color: #163a1c;
+}
+
+.contact-hero,
+.contact-main-grid,
+.network-banner {
+    max-width: 1220px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-hero {
+    margin-bottom: 26px;
+}
+
+.contact-hero h1 {
+    font-size: clamp(44px, 5vw, 66px);
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.contact-hero p {
+    max-width: 760px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #4d6652;
+}
+
+.contact-main-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 0.95fr;
+    gap: 18px;
+}
+
+.query-card,
+.outreach-card,
+.faq-card {
+    background: rgba(255, 255, 255, 0.42);
+    border: 1px solid rgba(20, 56, 27, 0.09);
+    border-radius: 8px;
+}
+
+.query-card {
+    padding: 26px;
+}
+
+.query-card h2 {
+    font-size: 32px;
+    margin-bottom: 18px;
+}
+
+.query-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.query-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    font-size: 11px;
+    letter-spacing: 0.13em;
+    color: #4f6653;
+}
+
+.query-form input,
+.query-form textarea {
+    border: 1px solid rgba(20, 56, 27, 0.12);
+    border-radius: 6px;
+    background: #eff4ef;
+    padding: 12px 12px;
+    color: #173c1c;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.query-form textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.query-form button {
+    width: fit-content;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 22px;
+    background: linear-gradient(180deg, #266426, #16471b);
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.contact-side-column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.outreach-card,
+.faq-card {
+    padding: 18px;
+}
+
+.outreach-card h3,
+.faq-card h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.outreach-card p {
+    font-size: 13px;
+    line-height: 1.55;
+    color: #48604d;
+    margin-bottom: 10px;
+}
+
+.faq-card details {
+    background: rgba(255, 255, 255, 0.38);
+    border: 1px solid rgba(20, 56, 27, 0.08);
+    border-radius: 6px;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+}
+
+.faq-card summary {
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 700;
+    color: #183f1e;
+}
+
+.faq-card p {
+    margin-top: 8px;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #4f6653;
+}
+
+.network-banner {
+    margin-top: 24px;
+    border-radius: 14px;
+    overflow: hidden;
+    background: linear-gradient(105deg, rgba(27, 76, 31, 0.96) 0%, rgba(30, 90, 34, 0.94) 52%, rgba(18, 57, 20, 0.8) 100%), url('../images/Container.png');
+    background-size: cover;
+    background-position: center;
+    border: 1px solid rgba(20, 56, 27, 0.1);
+    box-shadow: 0 20px 34px rgba(11, 39, 16, 0.18);
+}
+
+.network-content {
+    max-width: 530px;
+    padding: 42px 36px;
+    color: #eff9ec;
+}
+
+.network-tag {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 999px;
+    padding: 5px 11px;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    margin-bottom: 12px;
+}
+
+.network-content h2 {
+    font-size: clamp(34px, 4vw, 50px);
+    line-height: 1.1;
+    margin-bottom: 12px;
+}
+
+.network-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #d8e9d3;
+}
+
+.network-metrics {
+    margin-top: 18px;
+    display: flex;
+    gap: 24px;
+}
+
+.network-metrics strong {
+    display: block;
+    font-size: 39px;
+    line-height: 1;
+}
+
+.network-metrics span {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    color: #d3e4cf;
+    margin-top: 4px;
+}
+
+@media (max-width: 1000px) {
+    .contact-main-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-page {
+        padding: 24px 12px 36px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .query-card,
+    .outreach-card,
+    .faq-card {
+        padding: 14px;
+    }
+
+    .network-content {
+        padding: 24px 18px;
+    }
+
+    .network-metrics {
+        gap: 16px;
+    }
+}
