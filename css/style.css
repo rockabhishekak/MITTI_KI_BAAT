@@ -932,3 +932,318 @@
         height: 210px;
     }
 }
+
+
+
+
+
+.advisory-page {
+    background: #eaf4ea;
+    padding: 26px 14px 56px;
+    color: #173c1c;
+}
+
+.advisory-hero-wrap,
+.advisory-main-grid,
+.advisory-cta {
+    max-width: 1220px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 22px;
+    color: #1d4921;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.advisory-hero-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 26px;
+    align-items: center;
+}
+
+.alert-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 12px;
+    border-radius: 999px;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: #9b3d6d;
+    background: #efe6eb;
+    margin-bottom: 18px;
+}
+
+.advisory-hero-text h1 {
+    font-size: clamp(50px, 6vw, 76px);
+    line-height: 0.95;
+    margin-bottom: 10px;
+}
+
+.latin-name {
+    font-size: clamp(18px, 2.3vw, 38px);
+    font-style: italic;
+    color: #2b4f2f;
+    margin-bottom: 16px;
+}
+
+.advisory-intro {
+    font-size: 17px;
+    line-height: 1.65;
+    max-width: 720px;
+    color: #4f6754;
+}
+
+.advisory-hero-image-panel {
+    position: relative;
+}
+
+.advisory-hero-image {
+    width: 100%;
+    height: 420px;
+    display: block;
+    border-radius: 8px;
+    object-fit: cover;
+    object-position: center;
+    transform: rotate(2deg);
+    box-shadow: 0 20px 36px rgba(15, 45, 21, 0.2);
+}
+
+.specimen-card {
+    position: absolute;
+    left: 20px;
+    bottom: -22px;
+    width: 210px;
+    border-radius: 10px;
+    background: #edf1ec;
+    border: 1px solid rgba(20, 56, 27, 0.08);
+    box-shadow: 0 10px 20px rgba(15, 45, 21, 0.15);
+    padding: 12px;
+}
+
+.spec-label {
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    color: #5e7463;
+    margin-bottom: 6px;
+}
+
+.specimen-card p {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #3f5243;
+}
+
+.advisory-main-grid {
+    margin-top: 36px;
+    display: grid;
+    grid-template-columns: 1.03fr 1fr 1fr;
+    grid-template-areas:
+        "symptoms damage damage"
+        "symptoms chemical organic";
+    gap: 18px;
+}
+
+.panel {
+    background: rgba(255, 255, 255, 0.45);
+    border: 1px solid rgba(20, 56, 27, 0.08);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.panel h2 {
+    font-size: 32px;
+    margin-bottom: 14px;
+}
+
+.panel-symptoms {
+    grid-area: symptoms;
+    grid-row: span 2;
+}
+
+.panel-damage {
+    grid-area: damage;
+}
+
+.panel-chemical {
+    grid-area: chemical;
+    background: rgba(210, 227, 209, 0.85);
+}
+
+.panel-organic {
+    grid-area: organic;
+    background: #235f2a;
+    color: #f1faef;
+}
+
+.symptom-item {
+    margin-bottom: 16px;
+}
+
+.symptom-item h3 {
+    font-size: 23px;
+    margin-bottom: 4px;
+}
+
+.symptom-item p,
+.panel-damage p,
+.panel-chemical p,
+.panel-organic li {
+    font-size: 13px;
+    line-height: 1.65;
+    color: #49614d;
+}
+
+.panel-damage {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 12px 18px;
+    align-items: start;
+}
+
+.panel-damage p {
+    grid-column: 1 / span 2;
+}
+
+.risk-tags {
+    display: flex;
+    gap: 10px;
+}
+
+.risk-tags span {
+    background: #f2f5f1;
+    border: 1px solid rgba(20, 56, 27, 0.08);
+    border-radius: 5px;
+    padding: 8px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.risk-tags small {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: #6f8773;
+}
+
+.risk-tags strong {
+    font-size: 21px;
+    line-height: 1;
+}
+
+.panel-damage img {
+    width: 100%;
+    height: 118px;
+    object-fit: cover;
+    border-radius: 6px;
+    filter: grayscale(1);
+    justify-self: end;
+}
+
+.chem-box {
+    border-radius: 6px;
+    background: #eef3ed;
+    border: 1px solid rgba(20, 56, 27, 0.08);
+    padding: 12px;
+    margin-bottom: 12px;
+}
+
+.chem-box h3 {
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.chem-box p {
+    font-style: italic;
+}
+
+.panel-organic h2,
+.panel-organic li {
+    color: #f1faef;
+}
+
+.panel-organic ul {
+    padding-left: 20px;
+}
+
+.panel-organic li {
+    margin-bottom: 8px;
+}
+
+.advisory-cta {
+    margin-top: 24px;
+    border-radius: 12px;
+    padding: 22px 26px;
+    border: 1px solid rgba(20, 56, 27, 0.08);
+    background: rgba(255, 255, 255, 0.42);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.advisory-cta h2 {
+    font-size: 34px;
+    margin-bottom: 4px;
+}
+
+.advisory-cta p {
+    font-size: 14px;
+    color: #4f6754;
+}
+
+.advisory-cta button {
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    background: #0f4817;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+    .advisory-hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .advisory-main-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "symptoms"
+            "damage"
+            "chemical"
+            "organic";
+    }
+
+    .panel-symptoms {
+        grid-row: auto;
+    }
+
+    .panel-damage {
+        grid-template-columns: 1fr;
+    }
+
+    .panel-damage p {
+        grid-column: auto;
+    }
+
+    .specimen-card {
+        position: static;
+        margin-top: 10px;
+    }
+
+    .advisory-hero-image {
+        height: 280px;
+    }
+
+    .advisory-cta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
