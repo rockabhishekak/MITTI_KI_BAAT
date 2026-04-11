@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identify Pest</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo3.png" alt="Logo">
+        </div>
+
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Identify Pest</a></li>
+            <li><a href="crops.html">Crops</a></li>
+            <li><a href="advisory.html">Advisory</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <button class="btn">Sign In</button>
+    </nav>
+
+    <main class="identify-page">
+        <section class="identify-hero">
+            <p class="identify-kicker">AGRICULTURAL PEST IDENTIFICATION</p>
+            <h1>Identify Agricultural Pests</h1>
+            <p class="identify-intro">
+                Upload a clear photo of the specimen to access our deep-learning diagnostic engine and
+                academic advisory archive.
+            </p>
+        </section>
+
+        <section class="identify-layout">
+            <div class="identify-upload-panel">
+                <div class="upload-card">
+                    <div class="upload-icon" aria-hidden="true">⬆</div>
+                    <h2>Drop specimen image here</h2>
+                    <p>High-resolution JPG or PNG preferred for accurate entomological analysis.</p>
+
+                    <label class="select-button" for="pest-image">Select from Device</label>
+                    <input id="pest-image" class="file-input" type="file" accept="image/*">
+                </div>
+
+                <button class="identify-btn">Identify Pest</button>
+            </div>
+
+            <div class="identify-results-panel">
+                <article class="result-featured">
+                    <div class="result-image-wrap">
+                        <img src="images/Specimen.png" alt="Detected pest sample">
+                        <span class="result-tag">CONFIRMED SPECIMEN</span>
+                    </div>
+
+                    <div class="result-content">
+                        <p class="result-family">CRAMBIDAE FAMILY</p>
+                        <h2>Rice Stem Borer</h2>
+                        <p class="result-scientific">Scirpophaga incertulas</p>
+                        <p class="result-description">
+                            A primary pest in Asian rice ecosystems. Characterized by white to creamy yellow
+                            coloration. Larvae cause significant "deadheart" in young plants and "whitehead"
+                            during the reproductive stage by boring into the stem.
+                        </p>
+
+                        <div class="result-footer-row">
+                            <a href="#">Full Advisory Profile →</a>
+                            <span class="alert-status">HIGH ALERT</span>
+                        </div>
+                    </div>
+                </article>
+
+                <div class="comparative-section">
+                    <p class="section-label">COMPARATIVE SAMPLES</p>
+
+                    <div class="sample-grid">
+                        <div class="sample-card">
+                            <img src="images/Container.png" alt="Brown Planthopper sample">
+                            <div>
+                                <h3>Brown Planthopper</h3>
+                                <p>Nilaparvata lugens</p>
+                            </div>
+                        </div>
+
+                        <div class="sample-card">
+                            <img src="images/leaf.png" alt="Rice Leaf Folder sample">
+                            <div>
+                                <h3>Rice Leaf Folder</h3>
+                                <p>Cnaphalocrocis medinalis</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="zones-section">
+                    <p class="section-label">COMMON DETECTION ZONES:</p>
+                    <div class="zone-tags">
+                        <span>Paddy Fields</span>
+                        <span>Wetland Ecologies</span>
+                        <span>Tropical Monsoons</span>
+                        <span>Irrigated Plains</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer identify-footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <h3>Mitti Ki Baat</h3>
+                <p>© 2026 Mitti Ki Baat. Academic Project</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="#">Institutional Repository</a>
+                <a href="#">Research Ethics</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>
