@@ -38,6 +38,27 @@
     color: #333;
     font-weight: bold;
     font-size: larger;
+    position: relative;
+    padding-bottom: 6px;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #173f1b;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.2s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a:focus-visible::after,
+.nav-links a.active-link::after {
+    transform: scaleX(1);
 }
 
 .btn {
@@ -717,5 +738,197 @@
 
     .footer-links {
         flex-wrap: wrap;
+    }
+}
+
+
+
+
+.crops-page {
+    background: #edf8ea;
+    padding: 36px 28px 60px;
+}
+
+.nav-links .active-link {
+    color: #173f1b;
+    border-bottom: 2px solid #173f1b;
+    padding-bottom: 5px;
+}
+
+.crops-hero {
+    max-width: 840px;
+    margin: 8px auto 34px;
+}
+
+.crops-kicker {
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    color: #607b65;
+    margin-bottom: 12px;
+}
+
+.crops-hero h1 {
+    font-size: clamp(34px, 4vw, 56px);
+    line-height: 1.05;
+    color: #103816;
+    max-width: 760px;
+    margin-bottom: 12px;
+}
+
+.crops-hero p {
+    max-width: 690px;
+    font-size: 17px;
+    line-height: 1.6;
+    color: #4f6754;
+}
+
+.crop-grid {
+    max-width: 1320px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.crop-catalog-card {
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(20, 56, 27, 0.08);
+    box-shadow: 0 10px 22px rgba(20, 56, 27, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.crop-catalog-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 28px rgba(20, 56, 27, 0.12);
+}
+
+.crop-visual {
+    height: 248px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.crop-wheat {
+    background-image: linear-gradient(180deg, rgba(17, 49, 71, 0.16), rgba(140, 102, 52, 0.14)), url('../images/wheat.png');
+    background-position: center 36%;
+}
+
+.crop-rice {
+    background-image: linear-gradient(160deg, rgba(64, 88, 18, 0.18), rgba(185, 214, 102, 0.12)), url('../images/rice.png');
+    background-position: center 48%;
+}
+
+.crop-maize {
+    background-image: linear-gradient(180deg, rgba(88, 121, 77, 0.14), rgba(42, 69, 36, 0.16)), url('../images/Maize.png');
+    background-position: center 42%;
+}
+
+.crop-sugarcane {
+    background-image: linear-gradient(180deg, rgba(11, 30, 68, 0.24), rgba(36, 90, 64, 0.16)), url('../images/Sugarcane.png');
+    background-position: center 46%;
+}
+
+.crop-cotton {
+    background-image: linear-gradient(180deg, rgba(25, 29, 24, 0.16), rgba(71, 56, 37, 0.14)), url('../images/Cotton.png');
+    background-position: center 52%;
+}
+
+.crop-pulses {
+    background-image: linear-gradient(180deg, rgba(187, 119, 68, 0.12), rgba(133, 87, 41, 0.12)), url('../images/Pulses.png');
+    background-position: center 42%;
+}
+
+.crop-info {
+    padding: 14px 14px 16px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.crop-info p {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: #607b65;
+    margin-bottom: 6px;
+}
+
+.crop-info h2 {
+    font-size: 32px;
+    color: #102f16;
+}
+
+.advisory-strip {
+    max-width: 1320px;
+    margin: 22px auto 0;
+    border-radius: 10px;
+    padding: 18px 20px;
+    border: 1px solid rgba(20, 56, 27, 0.08);
+    background: rgba(255, 255, 255, 0.5);
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 16px;
+}
+
+.advisory-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    font-size: 16px;
+    color: #1f5627;
+    background: #dcecdc;
+}
+
+.advisory-content h3 {
+    font-size: 16px;
+    margin-bottom: 4px;
+    color: #173f1b;
+}
+
+.advisory-content p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #607b65;
+}
+
+.advisory-strip a {
+    text-decoration: none;
+    color: #173f1b;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+@media (max-width: 1100px) {
+    .crop-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .advisory-strip {
+        grid-template-columns: auto 1fr;
+    }
+
+    .advisory-strip a {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .crops-page {
+        padding: 24px 14px 42px;
+    }
+
+    .crops-hero {
+        margin-bottom: 22px;
+    }
+
+    .crop-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .crop-visual {
+        height: 210px;
     }
 }
