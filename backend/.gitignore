@@ -1,0 +1,8 @@
+# Node.js dependencies — installed locally via "npm install"
+node_modules/
+
+# Environment variables file — contains secrets, never commit this!
+.env
+
+# macOS system file
+.DS_Store
