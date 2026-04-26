@@ -35,17 +35,18 @@
             <p class="identify-kicker">AGRICULTURAL PEST IDENTIFICATION</p>
             <h1>Identify Agricultural Pests</h1>
             <p class="identify-intro">
-                Upload a clear photo of the specimen to access our deep-learning diagnostic engine and
-                academic advisory archive.
+                Upload a clear photo of the specimen to look up the closest Perenual pest-disease match
+                and open the advisory record for that result.
             </p>
         </section>
 
         <section class="identify-layout">
             <div class="identify-upload-panel">
-                <div class="upload-card">
+                <div class="upload-card" id="identifyDropzone">
                     <div class="upload-icon" aria-hidden="true">⬆</div>
                     <h2>Drop specimen image here</h2>
                     <p>High-resolution JPG or PNG preferred for accurate entomological analysis.</p>
+                    <p id="identifyUploadStatus" class="upload-status">No file selected.</p>
 
                     <label class="select-button" for="pest-image">Select from Device</label>
                     <input id="pest-image" class="file-input" type="file" accept="image/*">
@@ -57,15 +58,15 @@
             <div class="identify-results-panel">
                 <article class="result-featured">
                     <div class="result-image-wrap">
-                        <img src="images/Specimen.png" alt="Detected pest sample">
+                        <img id="identifyPreview" src="images/Specimen.png" alt="Detected pest sample">
                         <span class="result-tag">CONFIRMED SPECIMEN</span>
                     </div>
 
                     <div class="result-content">
-                        <p class="result-family">CRAMBIDAE FAMILY</p>
-                        <h2>Rice Stem Borer</h2>
-                        <p class="result-scientific">Scirpophaga incertulas</p>
-                        <p class="result-description">
+                        <p id="identifyFamily" class="result-family">CRAMBIDAE FAMILY</p>
+                        <h2 id="identifyName">Rice Stem Borer</h2>
+                        <p id="identifyScientific" class="result-scientific">Scirpophaga incertulas</p>
+                        <p id="identifyDescription" class="result-description">
                             A primary pest in Asian rice ecosystems. Characterized by white to creamy yellow
                             coloration. Larvae cause significant "deadheart" in young plants and "whitehead"
                             during the reproductive stage by boring into the stem.
@@ -73,7 +74,7 @@
 
                         <div class="result-footer-row">
                             <a href="#">Full Advisory Profile →</a>
-                            <span class="alert-status">HIGH ALERT</span>
+                            <span id="identifyAlert" class="alert-status">HIGH ALERT</span>
                         </div>
                     </div>
                 </article>
@@ -129,6 +130,8 @@
 
         </div>
     </footer>
+
+    <script src="js/script.js"></script>
 
 </body>
 

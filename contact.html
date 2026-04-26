@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Contact</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" href="images/logo5.png" type="image/png">
 </head>
 
 <body>
@@ -42,7 +43,7 @@
 			<article class="query-card">
 				<h2>✉ Submit a Query</h2>
 
-				<form class="query-form" action="#" method="post">
+				<form class="query-form" action="#" method="post" novalidate>
 					<div class="form-row">
 						<label>
 							FULL NAME
@@ -59,6 +60,8 @@
 						YOUR MESSAGE
 						<textarea name="message" rows="5" placeholder="Describe your pest concern or system inquiry..."></textarea>
 					</label>
+
+					<p class="form-feedback" aria-live="polite"></p>
 
 					<button type="submit">Submit Query</button>
 				</form>
@@ -141,6 +144,8 @@
 
 		</div>
 	</footer>
+
+	<script src="js/script.js"></script>
 
 </body>
 

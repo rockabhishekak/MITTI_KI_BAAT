@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/logo5.png" type="image/png">
+    <link rel="icon" href="images/logo5.png" type="image/png">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo3.png" alt="Logo">
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="identify.html">Identify Pest</a></li>
+            <li><a href="crops.html">Crops</a></li>
+            <li><a href="advisory.html">Advisory</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <button class="btn active-link">Sign In</button>
+    </nav>
+
+    <main class="login-page">
+        <section class="login-card" aria-label="Login form">
+            <p class="login-kicker">SECURE ACCESS</p>
+            <h1>Welcome Back</h1>
+            <p class="login-subtitle">Create an account first, then sign in with the same email and password.</p>
+
+            <div class="auth-toggle" role="tablist" aria-label="Authentication mode">
+                <button type="button" class="login-submit auth-mode-btn active" data-auth-mode="login">Sign In</button>
+                <button type="button" class="login-submit auth-mode-btn" data-auth-mode="register">Register</button>
+            </div>
+
+            <form class="login-form" novalidate>
+                <label>
+                    Email Address
+                    <input type="email" name="email" placeholder="farmer@example.com" required>
+                </label>
+
+                <label>
+                    Password
+                    <input type="password" name="password" placeholder="Enter your password" required minlength="6">
+                </label>
+
+                <div class="login-row">
+                    <label class="remember-wrap">
+                        <input type="checkbox" name="remember">
+                        <span>Remember me</span>
+                    </label>
+                    <a href="#">Forgot password?</a>
+                </div>
+
+                <p class="login-feedback" aria-live="polite"></p>
+
+                <button type="submit" class="login-submit">Sign In</button>
+            </form>
+
+            <form class="register-form" novalidate hidden>
+                <label>
+                    Full Name
+                    <input type="text" name="name" placeholder="Enter your full name" required minlength="3">
+                </label>
+
+                <label>
+                    Email Address
+                    <input type="email" name="email" placeholder="farmer@example.com" required>
+                </label>
+
+                <label>
+                    Password
+                    <input type="password" name="password" placeholder="Create password" required minlength="6">
+                </label>
+
+                <label>
+                    Confirm Password
+                    <input type="password" name="confirmPassword" placeholder="Re-enter password" required
+                        minlength="6">
+                </label>
+
+                <p class="register-feedback login-feedback" aria-live="polite"></p>
+
+                <button type="submit" class="login-submit register-submit">Create Account</button>
+            </form>
+
+            <p class="login-hint">Your account will be saved in MongoDB.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <h3>Mitti Ki Baat</h3>
+                <p>© 2026 Mitti Ki Baat. Academic Project</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="#">Institutional Repository</a>
+                <a href="#">Research Ethics</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

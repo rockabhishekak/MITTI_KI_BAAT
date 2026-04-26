@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advisory</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/logo5.png" type="image/png">
 </head>
 
 <body>
@@ -35,9 +36,9 @@
             <div class="advisory-hero-grid">
                 <div class="advisory-hero-text">
                     <p class="alert-pill">HIGH ALERT: PEST OUTBREAK</p>
-                    <h1>Fall Armyworm</h1>
-                    <p class="latin-name">(Spodoptera frugiperda)</p>
-                    <p class="advisory-intro">
+                    <h1 id="advisoryPestName">Fall Armyworm</h1>
+                    <p id="advisoryPestScientific" class="latin-name">(Spodoptera frugiperda)</p>
+                    <p id="advisoryPestIntro" class="advisory-intro">
                         An invasive lepidopteran pest that causes significant damage to maize and other
                         cereal crops. Early detection is paramount for effective management and yield
                         preservation.
@@ -78,15 +79,15 @@
 
             <article class="panel panel-damage">
                 <h2>Economic Damage</h2>
-                <p>
+                <p id="advisoryDamageText">
                     Untreated infestations can result in yield losses of up to <strong>40-60%</strong>.
                     The larvae migrate to the ear/cob in later stages, directly destroying the grain and
                     inviting secondary fungal infections.
                 </p>
 
                 <div class="risk-tags">
-                    <span><small>YIELD RISK</small><strong>Critical</strong></span>
-                    <span><small>GROWTH PHASE</small><strong>Vegetative</strong></span>
+                    <span><small>YIELD RISK</small><strong id="advisoryYieldRisk">Critical</strong></span>
+                    <span><small>GROWTH PHASE</small><strong id="advisoryGrowthPhase">Vegetative</strong></span>
                 </div>
 
                 <img src="images/Damaged_maize_field.jpg" alt="Damaged maize field">
@@ -140,6 +141,8 @@
 
         </div>
     </footer>
+
+    <script src="js/script.js"></script>
 
 </body>
 
